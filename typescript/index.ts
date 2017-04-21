@@ -172,6 +172,7 @@ module app.game
 
 module app.game
 {
+  //Uses the Minimax algorithm found at http://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
   export class AIPlayer
     {
       AIToken: string;
