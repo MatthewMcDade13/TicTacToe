@@ -121,6 +121,7 @@ var app;
 })(app || (app = {}));
 (function (app) {
     var game;
+    //Uses the Minimax Algorithm found at http://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
     (function (game) {
         var AIPlayer = (function () {
             function AIPlayer(playerToken, AIToken) {
