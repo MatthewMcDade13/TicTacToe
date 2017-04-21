@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <!--HTML Template for GameBoard URL is: http://codepen.io/MatthewMcDade13/pen/bWNzPp -->
+<body ng-app="ticTacToe">
+  <div ng-controller="MenuController as menu">
+    <div id="mainMenuWrapper" ng-hide="menu.decisionMade">
+      <div id="mainMenu">
+        <h4><u>{{menu.menuHeader}}</u></h4>
+        <div class="container">
+          <div class="row" ng-show="menu.selectPlayerMode">
+            <div class="col-6 menuOption" style="border-left-style: hidden" 
+                 ng-click="menu.setSinglePlayer()">
+              Single Player
+            </div>
+            <div class="col-6 menuOption" ng-click="menu.setTwoPlayer()">
+              Two Player
+            </div>
+          </div>
+          <div class="row" ng-hide="menu.selectPlayerMode"  class="fade-in">
+            <div class="col-6 menuOption" 
+                 style="border-left-style: hidden" ng-click="menu.setXToken()">
+              <p class="tokenSelect">X</p>
+            </div>
+            <div class="col-6 menuOption" ng-click="menu.setOToken()">
+              <p class="tokenSelect">O</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div ng-show="menu.decisionMade" class="animate-show animate-hide">
+      <div ng-if="!menu.opponent" ng-controller="GameBoardControllerPlayer as game"
+           ng-include="'/template.html'">
+        {{game.setPlayerTokens(menu.token)}}
+        {{game.randomizeStartPlayer()}}
+      </div>
+      <div ng-if="menu.opponent" ng-controller="GameBoardControllerAI as game"
+           ng-include="'/template.html'">
+        {{game.setPlayerToken(menu.token)}}    
+      </div>
+    </div>
+  </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js'></script>
+<script src='https://code.angularjs.org/1.6.0//angular-animate.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

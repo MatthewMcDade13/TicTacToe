@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>TicTacToe Template</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <div id="gameWrapper">
+  <div ng-hide="menu.opponent">
+    <h1>Player {{game.playerService.activePlayer.playerToken}}'s Turn</h1>
+  </div>
+  <div>
+    <h2>{{game.playerService.winningPlayer}}</h2>
+  </div>
+    <div id="gameBoard">
+      <div class="container">
+        <div class="row" ng-repeat="row in game.gameBoard.grid">
+          <div class="col-4 cell" ng-repeat="cell in row" 
+               ng-click="game.playMove(cell); cell.setHighlight()" ng-style="game.gameBoard.setCellStyle(cell)">
+             <p ng-show="cell.placed">{{cell.token}}</p>
+          </div>
+         </div>
+       </div>
+    </div>
+</div>
+  
+  
+</body>
+</html>

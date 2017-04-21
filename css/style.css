@@ -1,0 +1,109 @@
+*
+{
+  font-family: 'Press Start 2P', cursive;
+  -webkit-user-select: none;
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+body
+{
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+h4
+{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+h2
+{
+  right: 0;
+  left: 0;
+  top: 200px;
+  color: #cb3434;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+}
+
+#mainMenuWrapper
+{
+  margin-top: 18%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  height: 250px;
+}
+
+#mainMenu
+{
+  width: inherit;
+  height: inherit;
+  border-style: solid;
+  box-shadow: 8px 8px 20px rgb(0, 0, 0);
+}
+
+#gameWrapper
+{ 
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 600px;
+}
+
+#gameBoard
+{
+  width: inherit;
+  height: inherit;
+  box-shadow: 8px 8px 20px rgb(0, 0, 0);
+}
+
+.cell
+{
+  border-style: solid;
+  font-size: 80px;
+  height: 199px;
+}
+
+.cell:hover
+{
+  cursor: pointer;
+  background-color: #1a1a1a;
+  transition: 0.3s;
+}
+
+.menuOption
+{
+  border-style: solid;
+  border-bottom-style: hidden;
+  border-right-style: hidden;
+  height: 150px;
+}
+
+.menuOption:hover
+{
+  cursor: pointer;
+  background-color: #1a1a1a;
+  transition: 0.3s;
+}
+
+p
+{
+  margin: 20%;
+}
+
+.tokenSelect
+{
+  margin: 3%;
+  font-size: 95px;
+}
+
